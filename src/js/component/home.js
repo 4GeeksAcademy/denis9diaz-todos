@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Home = () => {
-    const [input, setInput] = useState("");
+    const [input, setInput] = useState([]);
     const [todos, setTodos] = useState([]);
 
     const inputKeyPress = (event) => {
