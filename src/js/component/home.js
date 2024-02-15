@@ -12,7 +12,7 @@ const Home = () => {
 	}
 	return (
 		<div className="list container">
-			<h1 className="title">Todos list</h1>
+			<h1 className="title">Todo list</h1>
 			<ul className="list-group">
 				<li className="list-group-item"><input onKeyDown={inputKeyPress} type="text" placeholder="What needs to be done?" value={input} onChange={(e) => {
 					setInput(e.target.value)
