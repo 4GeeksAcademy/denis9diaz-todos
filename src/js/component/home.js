@@ -5,7 +5,7 @@ const Home = () => {
     const [todos, setTodos] = useState([]);
 
     const inputKeyPress = (event) => {
-        if (event.key === "Enter") {
+        if (event.key === "Enter"){
             setTodos([...todos, input]);
             setInput("");
         }
@@ -23,16 +23,16 @@ const Home = () => {
             <ul className="list-group">
                 <li className="list-group-item">
                     <input
-                        onKeyDown={inputKeyPress}
                         type="text"
                         placeholder="What needs to be done?"
                         value={input}
-                        onChange={(e) => setInput(e.target.value)}/>
+                        onChange={(e) => setInput(e.target.value)}
+                        onKeyDown={inputKeyPress}/>
                 </li>
                 {todos.map((todo, index) => (
                     <li className="list-group-item" key={index}>
                         {todo}
-                        <button
+                            <button
                             type="button"
                             className="btn deleteButton"
                             onClick={deleteTodo(index)}>X</button>
